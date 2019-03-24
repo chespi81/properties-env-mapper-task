@@ -1,0 +1,36 @@
+{
+  "manifestVersion": 1,
+  "id": "build-release-task",
+  "name": "Build and Release Utilities",
+  "version": "0.0.1",
+  "publisher": "chespi81",
+  "targets": [
+      {
+          "id": "Microsoft.VisualStudio.Services"
+      }
+  ],    
+  "description": "Tools for building/releasing. Includes one build/release task.",
+  "categories": [
+      "Azure Pipelines"
+  ],
+  "icons": {
+      "default": "images/extension-icon.png"        
+  },
+  "files": [
+      {
+          "path": "properties-variable-mapper"
+      }
+  ],
+  "contributions": [
+      {
+          "id": "properties-variable-mapper",
+          "type": "ms.vss-distributed-task.task",
+          "targets": [
+              "ms.vss-distributed-task.tasks"
+          ],
+          "properties": {
+              "name": "properties-variable-mapper"
+          }
+      }
+  ]
+}
