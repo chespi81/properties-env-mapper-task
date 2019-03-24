@@ -1,0 +1,37 @@
+{
+  "id": "ff3d8d18-d6d8-4671-b278-013282f48fad",
+  "name": "properties-env-mapper-task",
+  "friendlyName": "Properties Environment Mapper Task",
+  "description": "Permite reemplazar variables del pipeline dentro de archivos de configuración.",
+  "helpMarkDown": "",
+  "category": "Utility",
+  "author": "chespi81",
+  "version": {
+      "Major": 0,
+      "Minor": 1,
+      "Patch": 0
+  },
+  "instanceNameFormat": "Properties Environment Mapper for $(DEST_FILE)",
+  "inputs": [
+      {
+          "name": "SOURCE_FILE",
+          "type": "string",
+          "label": "Source File",
+          "defaultValue": "",
+          "required": true,
+          "helpMarkDown": "This is the source file from which the variables will be replaced."
+      },
+      {
+        "name": "DEST_FILE",
+        "type": "string",
+        "label": "Destination File",
+        "defaultValue": "",
+        "required": true,
+        "helpMarkDown": "This is the destination file where the variables will be replaced."
+    }  ],
+  "execution": {
+      "Node": {
+          "target": "index.js"
+      }
+  }
+}
